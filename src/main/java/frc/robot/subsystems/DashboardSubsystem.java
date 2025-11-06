@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 public class DashboardSubsystem extends SubsystemBase {
 
     private final SparkMax primarymotor = 
-        new SparkMax(1, MotorType.kBrushless);
+        new SparkMax(7, MotorType.kBrushless);
 
     SparkMaxConfig primaryConfig = new SparkMaxConfig();
 

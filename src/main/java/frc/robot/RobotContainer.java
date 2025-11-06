@@ -51,8 +51,7 @@ public class RobotContainer {
 
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
-    m_driverController.b().onTrue(dashboardCommands.startCommand());
-    m_driverController.a().onTrue(dashboardCommands.stopCommand());
+    m_driverController.b().onTrue(dashboardCommands.setmotors(1)).onFalse(dashboardCommands.setmotors(0));
   }
 
   /**

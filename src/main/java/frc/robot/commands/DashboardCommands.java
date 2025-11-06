@@ -11,16 +11,10 @@ public class DashboardCommands {
         public DashboardCommands(DashboardSubsystem dashboardSubsystem) {
             this.variablename=dashboardSubsystem;
         }
-        public static Command startCommand() {
-        return Commands.runOnce(()->{
-            variablename.setMotor(1);
-    }, null);
+
+        public static Command setmotors(double speed) {
+        return Commands.runOnce(()->
+            variablename.setMotor(speed));
+    }
     
   }
-  public static Command stopCommand() {
-    return Commands.runOnce(()->{
-        variablename.setMotor(1);
-}, null);
-
-}
-}
